@@ -11,7 +11,9 @@
                     var marker = this.el;
                     this.vid = document.querySelector("#vid1");
                     this.vid2 = document.querySelector("#vid2");
-
+                    this.vid.stop();
+                    this.vid2.stop();
+                    
                     marker.addEventListener('markerFound', function (a) {
                         if(marker.id == "markerA")
                         {
