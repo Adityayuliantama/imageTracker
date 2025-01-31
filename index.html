@@ -12,10 +12,17 @@
                     this.vid = document.querySelector("#vid1");
                     this.vid2 = document.querySelector("#vid2");
 
-                    marker.addEventListener('markerFound', function () {
+                    marker.addEventListener('markerFound', function (a) {
+                        if(a.data.id == "markerA")
+                        {
+                            
+                            this.vid.play();
+                        }
+                        if(a.data.id == "markerB")
+                        {
+                            this.vid2.play();
+                        }
                         this.toggle = true;
-                        this.vid.play();
-                        this.vid2.play();
                     }.bind(this));
 
                     marker.addEventListener('markerLost', function () {
