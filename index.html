@@ -13,12 +13,12 @@
                     this.vid2 = document.querySelector("#vid2");
 
                     marker.addEventListener('markerFound', function (a) {
-                        if(a.data.id == "markerA")
+                        if(marker.id == "markerA")
                         {
                             
                             this.vid.play();
                         }
-                        if(a.data.id == "markerB")
+                        if(marker.id == "markerB")
                         {
                             this.vid2.play();
                         }
