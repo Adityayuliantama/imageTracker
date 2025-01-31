@@ -9,9 +9,9 @@
 
     <body style="margin: 0; overflow: hidden;">
         <a-scene
-            vr-mode-ui="enabled: false;"
+            vr-mode-ui="enabled: false"
             loading-screen="enabled: false;"
-            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+            arjs='sourceType: webcam; debugUIEnabled: false;'
             id="scene"
             embedded
             gesture-detector
@@ -31,7 +31,7 @@
                 ></video>
                 <video
                     id="vid2"
-                    src="assets/video1.mp4"
+                    src="assets/video2.mp4"
                     preload="auto"
                     response-type="arraybuffer"
                     loop
@@ -42,6 +42,7 @@
                     playsinline
                 ></video>
             </a-assets>
+
             <a-marker
                 type="pattern"
                 preset="custom"
@@ -68,7 +69,7 @@
             <a-marker
                 type="pattern"
                 preset="custom"
-                url="assets/marker.patt"
+                url="assets/marker1.patt"
                 videohandler
                 smooth="true"
                 smoothCount="10"
@@ -88,6 +89,8 @@
                     gesture-handler
                 ></a-video>
             </a-marker>
+            
+
             <a-entity camera></a-entity>
         </a-scene>
     </body>
